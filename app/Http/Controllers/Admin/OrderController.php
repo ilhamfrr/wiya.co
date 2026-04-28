@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\Order;
+use Illuminate\Http\Request;
+
+class OrderController extends Controller
+{
+    /**
+     * Display a listing of the orders.
+     */
+    public function index()
+    {
+        $orders = Order::with(['items.product'])
+            ->latest()
+            ->paginate(10);
+
+        return view('admin.orders.index', compact('orders'));
+    }
+
+    /**
+     * Display the specified order.
+     */
+    public function show($id)
+    {
+        $order = Order::with(['items.product'])
+            ->findOrFail($id);
+
+        return view('admin.orders.show', compact('order'));
+    }
+
+    /**
+     * Update the status of the specified order.
+     */
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,paid,shipped,completed,cancelled',
+        ]);
+
+        $order = Order::findOrFail($id);
+        $order->update([
+            'status' => $request->status
+        ]);
+
+        return redirect()->back()->with('success', 'Order status updated successfully.');
+    }
+}
