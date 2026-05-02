@@ -27,7 +27,7 @@
         >
             {{-- Logo Area --}}
             <a href="{{ route('admin.dashboard') }}" class="p-10 flex flex-col items-center gap-4 group border-b border-white/5">
-                <img src="{{ asset('images/logo-wiya.png') }}" class="h-12 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-all" alt="WIYA.CO">
+                <span class="text-3xl font-black tracking-[0.2em] text-white group-hover:opacity-70 transition-opacity">WIYA.CO</span>
                 <span class="text-[8px] font-bold tracking-[0.4em] uppercase text-brand-accent/80">Admin Console</span>
             </a>
 

@@ -85,8 +85,8 @@
     <div class="max-w-7xl mx-auto px-4 text-center">
         <p class="text-[9px] font-black uppercase tracking-[0.5em] text-brand-dark/30 mb-12">Featured In & Trusted By</p>
         <div class="flex flex-wrap justify-center items-center gap-16 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
-            <span class="text-xl font-black tracking-tighter">VOGUE</span>
-            <span class="text-xl font-black tracking-tighter">BAZAAR</span>
+            <span class="text-xl font-black tracking-tighter">EVERMOS</span>
+            <span class="text-xl font-black tracking-tighter">NUSADIGI</span>
             <span class="text-xl font-black tracking-tighter">ELLE</span>
             <span class="text-xl font-black tracking-tighter">GRAZIA</span>
             <span class="text-xl font-black tracking-tighter">TATLER</span>

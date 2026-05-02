@@ -47,8 +47,8 @@
     <header class="sticky top-0 z-50 bg-brand-bg/80 backdrop-blur-xl border-b border-brand-dark/5">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
             {{-- Branding --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-                <img src="{{ asset('images/logo-wiya.png') }}" class="h-10 w-auto group-hover:scale-105 transition-transform" alt="WIYA.CO">
+            <a href="{{ route('home') }}" class="text-3xl font-black tracking-[0.2em] text-brand-dark hover:opacity-70 transition-opacity">
+                WIYA.CO
             </a>
 
             {{-- Desktop Menu --}}
@@ -56,8 +56,8 @@
                 <a href="{{ route('home') }}" class="hover:text-brand-dark transition-colors duration-300 {{ request()->routeIs('home') ? 'text-brand-dark' : '' }}">Home</a>
                 <a href="{{ route('shop') }}" class="hover:text-brand-dark transition-colors duration-300 {{ request()->routeIs('shop') ? 'text-brand-dark' : '' }}">Collections</a>
                 <a href="{{ route('lookbook') }}" class="hover:text-brand-dark transition-colors duration-300 {{ request()->routeIs('lookbook') ? 'text-brand-dark' : '' }}">Lookbook</a>
-                <a href="#" class="hover:text-brand-dark transition-colors duration-300">About</a>
-                <a href="#" class="hover:text-brand-dark transition-colors duration-300">Contact</a>
+                <a href="{{ route('about') }}" class="hover:text-brand-dark transition-colors duration-300 {{ request()->routeIs('about') ? 'text-brand-dark' : '' }}">About</a>
+                <a href="{{ route('contact') }}" class="hover:text-brand-dark transition-colors duration-300 {{ request()->routeIs('contact') ? 'text-brand-dark' : '' }}">Contact</a>
             </div>
 
             {{-- Actions --}}
@@ -126,7 +126,7 @@
                 <div>
                     <h4 class="text-[10px] font-black uppercase tracking-[0.3em] mb-6 text-brand-accent">Support</h4>
                     <ul class="space-y-4 text-xs tracking-widest uppercase">
-                        <li><a href="#" class="hover:text-brand-accent transition-colors">Contact</a></li>
+                        <li><a href="{{ route('contact') }}" class="hover:text-brand-accent transition-colors">Contact</a></li>
                         <li><a href="#" class="hover:text-brand-accent transition-colors">Shipping</a></li>
                         <li><a href="#" class="hover:text-brand-accent transition-colors">Returns</a></li>
                     </ul>
@@ -134,7 +134,7 @@
             </div>
             <div class="border-t border-brand-bg/10 mt-20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-bold tracking-widest uppercase text-brand-bg/20">
                 <p>&copy; {{ date('Y') }} WIYA.CO. All rights reserved.</p>
-                <p>Designed with Intent in Indonesia</p>
+                <p>Designed with Intent in Wiya Indonesia</p>
             </div>
         </div>
     </footer>

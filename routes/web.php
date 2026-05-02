@@ -34,6 +34,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/product/{slug}', [HomeController::class, 'show'])->name('product.show');
 Route::get('/lookbook', [HomeController::class, 'lookbook'])->name('lookbook');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 // Cart Routes
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
